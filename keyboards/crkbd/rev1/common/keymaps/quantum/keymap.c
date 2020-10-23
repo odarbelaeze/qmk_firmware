@@ -33,25 +33,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 KC_LGUI, LT(_RAISE ,KC_BSPC), LCTL_T(KC_SPC), RCTL_T(KC_SPC), LT(_LOWER,KC_ENT), KC_RALT
         ),
 	[_LOWER] = LAYOUT_split_3x6_3(
-                KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5,           KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC,
-                KC_LCTL, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,     KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_TRNS, KC_F6,
-                KC_LSFT, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F12,
+                KC_DEL, KC_1, KC_2, KC_3, KC_4, KC_5,           KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS,
+                KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,        KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, KC_NO,
+                KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,     KC_NO,   KC_NO,   KC_NO, KC_NO,   KC_NO, KC_NO,
 
-                KC_LGUI, MO(_ADJUST), KC_SPC, KC_ENT, KC_TRNS, KC_RALT
+                KC_TRNS, MO(_ADJUST), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
         ),
 	[_RAISE] = LAYOUT_split_3x6_3(
-                KC_ESC, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,       KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
-                KC_LCTL, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,             KC_MINS, KC_EQL, KC_LCBR, KC_RCBR, KC_PIPE, KC_GRV, KC_LSFT,
-                KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,                      KC_UNDS, KC_PLUS, KC_LBRC, KC_RBRC, KC_BSLS, KC_TILD,
+                KC_TRNS, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,              KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_MINS,
+                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,             KC_MINS, KC_EQL, KC_LCBR, KC_RCBR, KC_PIPE, KC_GRV, KC_LSFT,
+                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_UNDS, KC_PLUS, KC_LBRC, KC_RBRC, KC_BSLS, KC_TILD,
 
-                KC_LGUI, KC_TRNS, KC_SPC, KC_ENT, MO(_ADJUST), KC_RALT
+                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MO(_ADJUST), KC_TRNS
         ),
 	[_ADJUST] = LAYOUT_split_3x6_3(
                 RESET, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
                 RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
                 RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
 
-                KC_LGUI, KC_TRNS, KC_SPC, KC_ENT, KC_TRNS, KC_RALT
+                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
         )
 };
 
@@ -72,7 +72,7 @@ void render_status(void) {
             oled_write_P(PSTR("Raise\n"), false);
             break;
         case _ADJUST:
-            oled_write_P(PSTR("ADJUST\n"), false);
+            oled_write_P(PSTR("Adjust\n"), false);
             break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
