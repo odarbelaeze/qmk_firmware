@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#define SPLIT_NAND_PIN D2
-
 #define MASTER_LEFT
+#define SPLIT_NAND_PIN D2
+#define TAP_CODE_DELAY 150
 
