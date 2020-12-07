@@ -22,5 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define MASTER_LEFT
 #define SPLIT_NAND_PIN D2
-#define TAP_CODE_DELAY 150
+#define TAPPING_TERM 250
+#define PERMISSIVE_HOLD
 
